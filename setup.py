@@ -35,7 +35,6 @@ setup(
     name='pyblish_modo',
     version=version,
     packages=find_packages(),
-    package_dir={'pyblish': 'pyblish'},
     url='https://github.com/abstractfactory/pyblish-modo',
     license='LGPL',
     author='Marcus Ottosson',

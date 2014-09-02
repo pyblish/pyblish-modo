@@ -1,4 +1,4 @@
-Maya Pyblish
+Modo Pyblish
 ============
 
-Autodesk Maya integration of Pyblish
+The Foundry Modo integration of Pyblish
