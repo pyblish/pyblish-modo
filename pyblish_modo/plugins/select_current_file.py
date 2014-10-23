@@ -2,6 +2,8 @@ import os
 
 import pyblish.api
 
+import lxu.select
+
 
 @pyblish.api.log
 class SelectCurrentFile(pyblish.api.Selector):
@@ -17,4 +19,9 @@ class SelectCurrentFile(pyblish.api.Selector):
 
     def process_context(self, context):
         """Todo, inject the current working file"""
-        pass
+        current_file = lxu.select.SceneSelection().current().Filename()
+
+        # Maya returns forward-slashes by default
+        normalised = os.path.normpath(current_file)
+
+        context.set_data('current_file', value=normalised)
