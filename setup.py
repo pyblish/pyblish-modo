@@ -32,15 +32,22 @@ classifiers = [
 
 
 setup(
-    name='pyblish_modo',
+    name='pyblish-modo',
     version=version,
     packages=find_packages(),
-    url='https://github.com/abstractfactory/pyblish-modo',
+    url='https://github.com/pyblish/pyblish-modo',
     license='LGPL',
     author='Marcus Ottosson',
     author_email='marcus@abstractfactory.io',
-    description='modo pyblish package',
+    description='The Foundry Modo Pyblish integration',
     long_description=readme,
     zip_safe=False,
-    classifiers=classifiers
+    classifiers=classifiers,
+    package_data={
+        "pyblish_modo": [
+            "nexus_user/Scripts/PyblishModo/pyscripts/*.py",
+            "nexus_user/Scripts/PyblishModo/*.CFG",
+            "nexus_user/*.txt",
+        ],
+    }
 )

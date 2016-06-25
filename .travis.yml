@@ -1,0 +1,16 @@
+language: python
+
+python:
+- 2.7
+
+script:
+- pip install file://$(pwd)
+
+deploy:
+  provider: pypi
+  user: mottosso
+  password:
+    secure: nWNM5gQ0VkICjm9VKuTULXRld1ixswCKdN6dg34su4aiZrvEvKvN3tLjg3GX7/JpwH9SfLUrAXpA1AgpOF4YIQ2k7JJsFLSmHYLO5DgeFSxNjHBoZ7mvPwmdAa8a7eofHWwgUD1p5RL1Orwz+U1lt5Z2PIpBtB6XSwF/cEx5uyQ=
+  on:
+    tags: true
+    repo: pyblish/pyblish-modo
